@@ -1,0 +1,18 @@
+file /proj/expeditus/ns-allinone-3.10/nsc-0.5.2/SConstruct,line 125:
+	Configure(confdir = .sconf_temp)
+scons: Configure: Checking target architecure...
+scons: Configure: (cached) amd64, checking userland ...
+scons: Configure: ".sconf_temp/conftest_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp/conftest_0.c <-
+  |  |int main(void)
+  |  |{return 0;}
+  |  |
+  |
+scons: Configure: ".sconf_temp/conftest_0.o" is up to date.
+scons: Configure: The original builder output was:
+  |gcc -o .sconf_temp/conftest_0.o -c .sconf_temp/conftest_0.c
+  |
+scons: Configure: (cached) amd64
+
+

@@ -1,0 +1,373 @@
+# project ns (3.10) configured on Mon May 23 00:14:22 2016 by
+# waf 1.5.16 (abi 7, python 20706f0 on linux2)
+# using waf configure --disable-python
+#
+
+----------------------------------------
+Checking for program gcc or cc
+  find program=['gcc', 'cc'] paths=[] var='CC'
+  -> '/usr/bin/gcc'
+
+----------------------------------------
+Checking for program cpp
+  find program=['cpp'] paths=[] var='CPP'
+  -> '/usr/bin/cpp'
+
+----------------------------------------
+Checking for program ar
+  find program=['ar'] paths=[] var='AR'
+  -> '/usr/bin/ar'
+
+----------------------------------------
+Checking for program ranlib
+  find program=['ranlib'] paths=[] var='RANLIB'
+  -> '/usr/bin/ranlib'
+
+----------------------------------------
+Checking for gcc 
+ok 
+
+----------------------------------------
+Checking for program g++ or c++
+  find program=['g++', 'c++'] paths=[] var='CXX'
+  -> 'g++-4.4'
+
+----------------------------------------
+Checking for g++ 
+ok 
+
+----------------------------------------
+Checking for program pkg-config
+  find program=['pkg-config'] paths=[] var='PKG_CONFIG'
+  -> ''
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cc -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['g++-4.4', '-Wall', '-Wl,--soname=foo', '-Idebug', '-I..', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cc', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['g++-4.4', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog']
+
+----------------------------------------
+Checking for -Wl,--soname=foo support
+yes
+
+----------------------------------------
+Checking for header stdlib.h
+==>
+#include <stdlib.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['g++-4.4', '-Wall', '-Idebug', '-I..', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['g++-4.4', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog']
+yes
+
+----------------------------------------
+Checking for header signal.h
+==>
+#include <signal.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['g++-4.4', '-Wall', '-Idebug', '-I..', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['g++-4.4', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog']
+yes
+
+----------------------------------------
+Checking for header pthread.h
+==>
+
+#include <pthread.h>
+int main ()
+{
+   pthread_mutex_t m;
+   pthread_mutex_init (&m, NULL);
+   return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['g++-4.4', '-Wall', '-pthread', '-Idebug', '-I..', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['g++-4.4', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog', '-pthread']
+yes
+
+----------------------------------------
+Checking for type uint128_t
+==>
+#include <stdint.h>
+
+int main() {
+	if ((uint128_t *) 0) return 0;
+	if (sizeof (uint128_t)) return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m../test.cpp: In function 'int main()':
+../test.cpp:4: error: 'uint128_t' was not declared in this scope
+../test.cpp:4: error: expected primary-expression before ')' token
+../test.cpp:4: error: expected ')' before numeric constant
+../test.cpp:5: error: 'uint128_t' was not declared in this scope
+['g++-4.4', '-Wall', '-Idebug', '-I..', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+command returned 'Build failed:  -> task failed (err #1): \n\t{task: cxx test.cpp -> test_1.o}'not found
+
+----------------------------------------
+Checking for type __uint128_t
+==>
+#include <stdint.h>
+
+int main() {
+	if ((__uint128_t *) 0) return 0;
+	if (sizeof (__uint128_t)) return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['g++-4.4', '-Wall', '-Idebug', '-I..', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['g++-4.4', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog']
+yes
+
+-----------------------------------------------
+Checking for high precision time implementation
+128-bit integer
+
+-----------------------------------------------
+Checking for header stdint.h
+==>
+#include <stdint.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['g++-4.4', '-Wall', '-Idebug', '-I..', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['g++-4.4', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog']
+yes
+
+-----------------------------------------------
+Checking for header inttypes.h
+==>
+#include <inttypes.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['g++-4.4', '-Wall', '-Idebug', '-I..', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['g++-4.4', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog']
+yes
+
+-----------------------------------------------
+Checking for header sys/inttypes.h
+==>
+#include <sys/inttypes.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m../test.cpp:1: fatal error: sys/inttypes.h: No such file or directory
+compilation terminated.
+['g++-4.4', '-Wall', '-Idebug', '-I..', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+command returned 'Build failed:  -> task failed (err #1): \n\t{task: cxx test.cpp -> test_1.o}'not found
+
+-----------------------------------------------
+Checking for library rt
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['g++-4.4', '-Wall', '-Idebug', '-I..', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['g++-4.4', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog', '-Wl,-Bdynamic', '-lrt']
+yes
+
+-----------------------------------------------
+Checking for header netpacket/packet.h
+==>
+#include <netpacket/packet.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['g++-4.4', '-Wall', '-Idebug', '-I..', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['g++-4.4', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog']
+yes
+
+-----------------------------------------------
+Checking for header linux/if_tun.h
+==>
+#include <linux/if_tun.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['g++-4.4', '-Wall', '-Idebug', '-I..', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['g++-4.4', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog']
+yes
+
+-----------------------------------------------
+Checking for library sqlite3
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['g++-4.4', '-Wall', '-Idebug', '-I..', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m/usr/bin/ld: cannot find -lsqlite3
+collect2: ld returned 1 exit status
+['g++-4.4', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog', '-Wl,-Bdynamic', '-lsqlite3']
+command returned 'Build failed:  -> task failed (err #1): \n\t{task: cxx_link test_1.o -> testprog}'not found
+
+-----------------------------------------------
+Checking for NSC location 
+ok ../nsc-0.5.2 (guessed)
+
+-----------------------------------------------
+Checking for library dl
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['g++-4.4', '-Wall', '-Idebug', '-I..', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DNETWORK_SIMULATION_CRADLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['g++-4.4', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog', '-Wl,-Bdynamic', '-ldl']
+yes
+
+-----------------------------------------------
+Checking for NSC supported architecture x86_64
+ok 
+
+-----------------------------------------------
+Checking for header sys/socket.h
+==>
+#include <sys/socket.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['g++-4.4', '-Wall', '-Idebug', '-I..', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DNETWORK_SIMULATION_CRADLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['g++-4.4', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog']
+yes
+
+-----------------------------------------------
+Checking for header netinet/in.h
+==>
+#include <netinet/in.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['g++-4.4', '-Wall', '-Idebug', '-I..', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DNETWORK_SIMULATION_CRADLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['g++-4.4', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog']
+yes
+
+-----------------------------------------------
+Checking for program mpic++
+  find program=['mpic++'] paths=[] var='MPI'
+  -> ''
+
+-----------------------------------------------
+Checking for program sudo
+  find program=['sudo'] paths=[] var='SUDO'
+  -> '/usr/bin/sudo'
+
+-----------------------------------------------
+Checking for program valgrind
+  find program=['valgrind'] paths=[] var='VALGRIND'
+  -> '/usr/bin/valgrind'
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['/usr/bin/gcc', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wall', '-Wno-error=deprecated-declarations', '-Idebug', '-I..', '-D_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DNETWORK_SIMULATION_CRADLE', '../test.c', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['/usr/bin/gcc', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog']
+
+-------------------------------------------------------
+Checking for -Wno-error=deprecated-declarations support
+yes
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['/usr/bin/gcc', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wall', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-Idebug', '-I..', '-D_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DNETWORK_SIMULATION_CRADLE', '../test.c', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['/usr/bin/gcc', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog']
+
+-------------------------------------------------------
+Checking for -fstrict-aliasing support
+yes
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['/usr/bin/gcc', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wall', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-Wstrict-aliasing', '-Idebug', '-I..', '-D_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DNETWORK_SIMULATION_CRADLE', '../test.c', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['/usr/bin/gcc', 'debug/test_1.o', '-o', '/proj/expeditus/ns-allinone-3.10/ns-3.10/build/.conf_check_0/testbuild/debug/testprog']
+
+-------------------------------------------------------
+Checking for -Wstrict-aliasing support
+yes
+
+-------------------------------------------------------
+Checking for program doxygen
+  find program=['doxygen'] paths=[] var='DOXYGEN'
+  -> ''

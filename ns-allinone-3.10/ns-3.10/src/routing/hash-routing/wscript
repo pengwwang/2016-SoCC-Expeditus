@@ -1,0 +1,26 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('hash-routing', ['node'])
+    module.source = [
+	'fivetuple.cc',
+	'hash-function-impl.cc',
+	'hash-routing.cc',
+	'md5.c',
+	'md5sum.cc',
+        'conga-header.cc',
+        'exp-header.cc',
+        ]
+    headers = bld.new_task_gen('ns3header')
+    headers.module = 'hash-routing'
+    headers.source = [
+	'fivetuple.h',
+	'hash-function.h',
+	'hash-function-impl.h',
+	'hash-routing.h',
+	'md5.h',
+	'md5sum.h',
+        'conga-header.h',
+        'exp-header.h',
+        ]
+
